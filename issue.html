@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Members</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/issue.css">
+</head>
+
+<body>
+
+    <h1>Issue & Return</h1>
+    <p class="subtitle">Manage book issuing and returning. Track issued books, process returns, and update member
+        activity easily.</p>
+
+    <div class="stats-container">
+        <div class="stat-card issued">
+            <div class="stat-icon"><i class="fas fa-book"></i></div>
+            <div>
+                <h3>Total Issued Books</h3>
+                <p>1,245</p>
+                <span>Rented books</span>
+            </div>
+        </div>
+
+        <div class="stat-card returned">
+            <div class="stat-icon"><i class="fas fa-rotate-left"></i></div>
+            <div>
+                <h3>Total Returned Books</h3>
+                <p>980</p>
+                <span>Books returned</span>
+            </div>
+        </div>
+
+        <div class="stat-card unreturned">
+            <div class="stat-icon"><i class="fas fa-hourglass-half"></i></div>
+            <div>
+                <h3>Un-Returned Books</h3>
+                <p>265</p>
+                <span>Pending returns</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="issue-return-container">
+        <h3>Manage books</h3>
+        <div class="grid">
+
+            <!-- ISSUE BOOK -->
+            <div class="card">
+                <h3><i class="fa-solid fa-arrow-up-right-from-square"></i> Issue a Book</h3>
+
+                <label>Name/Email</label>
+                <input type="text" placeholder="Enter Student Name">
+
+                <label>Book ID</label>
+                <input type="text" placeholder="Enter Book ID">
+
+                <label>Grade</label>
+                <input type="text" placeholder="Enter Grade (e.g., 10th Grade)">
+
+                <label>Browing Days</label>
+                <input type="number" placeholder="Enter Number of Days">
+
+                <label for="role">Role</label>
+                <select id="role">
+                    <option value="">Select Role</option>
+                    <option>Student</option>
+                    <option>Teacher</option>
+                    <option>Staff</option>
+                </select>
+
+                <button type="button" class="btn issue">Issue Book</button>
+            </div>
+
+            <!-- RETURN BOOK -->
+            <div class="card return">
+                <h3><i class="fa-solid fa-arrow-right-arrow-left"></i> Return a Book</h3>
+
+                <label>Name/Email</label>
+                <input type="text" placeholder="Enter Student ID">
+
+                <label>Book ID</label>
+                <input type="text" placeholder="Enter Book ID">
+
+                <label for="grade">Grade</label>
+                <input type="text" placeholder="Enter Grade (e.g., 10th Grade)">
+
+                <label>Return Date</label>
+                <input type="date" title="Returned date">
+
+                <label>Condition</label>
+                <select id="condition" title="Book-condition">
+                    <option value="">Select Condition</option>
+                    <option>Good</option>
+                    <option>Damaged</option>
+                    <option>Lost</option>
+                </select>
+
+                <button class="btn return">Return Book</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Search bar -->
+    <div class="header-container">
+        <!-- Search -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search by name, email, or grade">
+        </div>
+
+        <!-- Top Buttons -->
+        <div class="top-actions">
+            <button type="button" class="add"><i class="fas fa-plus"></i> Add Book</button>
+            <button type="button" class="import"><i class="fa-solid fa-upload"></i> Import CSV</button>
+            <button type="button" class="export"><i class="fa-solid fa-download"></i> Export CSV</button>
+        </div>
+    </div>
+
+    <!--  -->
+    <h2>List of isued books</h2>
+
+    <!-- Member Grid -->
+    <div class="member-grid">
+        <div class="member-card">
+            <div class="member-name">John Doe</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> john@example.com</span>
+                <span><strong>Grade:</strong> 12</span>
+                <span><strong>B-Date:</strong> 2025-11-26</span>
+                <span><strong>R-Date:</strong> 2025-12-01</span>
+                <span><strong>ARD:</strong> 2025-12-03</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> Financial literacy</span>
+                <span><strong>B-Code:</strong> GN-102</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-0987654321</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-comment-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-name">Alexandra Lee</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> alex@example.com</span>
+                <span><strong>Grade:</strong> 11</span>
+                <span><strong>B-Date:</strong> 2025-10-15</span>
+                <span><strong>R-Date:</strong> 2025-11-30</span>
+                <span><strong>ARD:</strong> 2025-12-14</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> Data literacy</span>
+                <span><strong>B-Code:</strong> GN-203</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-0123456789</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-comment-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-name">Michael Chen</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> michael@example.com</span>
+                <span><strong>Grade:</strong> 10</span>
+                <span><strong>B-Date:</strong> 2025-09-02</span>
+                <span><strong>R-Date:</strong> 2025-12-20</span>
+                <span><strong>ARD:</strong> 2025-12-25</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> Digital literacy</span>
+                <span><strong>B-Code:</strong> GN-301</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-1111111111</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-comment-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-name">Priya Kumar</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> priya@example.com</span>
+                <span><strong>Grade:</strong> 12</span>
+                <span><strong>B-Date:</strong> 2025-08-12</span>
+                <span><strong>R-Date:</strong> 2025-11-28</span>
+                <span><strong>ARD:</strong> 2025-12-02</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> Entrepreneurship</span>
+                <span><strong>B-Code:</strong> GN-402</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-2222222222</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-comment-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-name">Luis Hernandez</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> luis@example.com</span>
+                <span><strong>Grade:</strong> 9</span>
+                <span><strong>B-Date:</strong> 2025-07-10</span>
+                <span><strong>R-Date:</strong> 2025-12-04</span>
+                <span><strong>ARD:</strong> 2025-12-08</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> Critical thinking</span>
+                <span><strong>B-Code:</strong> GN-505</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-3333333333</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-comment-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-name">Emma Wilson</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> emma@example.com</span>
+                <span><strong>Grade:</strong> 11</span>
+                <span><strong>B-Date:</strong> 2025-03-22</span>
+                <span><strong>R-Date:</strong> 2025-12-09</span>
+                <span><strong>ARD:</strong> 2025-12-15</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> Media literacy</span>
+                <span><strong>B-Code:</strong> GN-606</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-4444444444</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-comment-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-name">Daniel Park</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> daniel@example.com</span>
+                <span><strong>Grade:</strong> 12</span>
+                <span><strong>B-Date:</strong> 2025-01-09</span>
+                <span><strong>R-Date:</strong> 2025-11-25</span>
+                <span><strong>ARD:</strong> 2025-12-03</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> AI basics</span>
+                <span><strong>B-Code:</strong> GN-707</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-5555555555</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-comment-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-name">Sofia Rossi</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> sofia@example.com</span>
+                <span><strong>Grade:</strong> 10</span>
+                <span><strong>B-Date:</strong> 2025-05-14</span>
+                <span><strong>R-Date:</strong> 2025-11-29</span>
+                <span><strong>ARD:</strong> 2025-12-01</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> STEM outreach</span>
+                <span><strong>B-Code:</strong> GN-808</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-6666666666</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-comment-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <div class="member-name">Noah Smith</div>
+            <div class="member-info">
+                <span><strong>Email:</strong> noah@example.com</span>
+                <span><strong>Grade:</strong> 9</span>
+                <span><strong>B-Date:</strong> 2025-02-18</span>
+                <span><strong>R-Date:</strong> 2025-12-10</span>
+                <span><strong>ARD:</strong> 2025-12-20</span>
+                <span><strong>Status:</strong> Active</span>
+                <span><strong>Title:</strong> Civic education</span>
+                <span><strong>B-Code:</strong> GN-909</span>
+                <span><strong>Role:</strong> Student</span>
+                <span><strong>ISBN:</strong> 978-7777777777</span>
+            </div>
+            <div class="member-actions">
+                <i class="fas fa-eye view" title="View Member"></i>
+                <i class="fas fa-document-dots message" title="Send Message"></i>
+                <i class="fas fa-user-slash block" title="Block Member"></i>
+                <i class="fas fa-pen edit" title="Edit Member"></i>
+                <i class="fas fa-trash delete" title="Delete Member"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

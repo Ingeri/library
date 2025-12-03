@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Books</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/books.css">
+</head>
+
+<body>
+
+    <h1>Library Books</h1>
+    <p class="subtitle">Manage all your books. Add, remove, or update details quickly using the action icons.</p>
+
+    <div class="books-stats-container">
+        <div class="books-stat-card available">
+            <div class="books-icon"><i class="fas fa-book-open"></i></div>
+            <div class="books-stat-info">
+                <h3>Available Books</h3>
+                <p>3,420</p>
+                <span>books in Library</span>
+            </div>
+        </div>
+    
+        <div class="books-stat-card new">
+            <div class="books-icon"><i class="fas fa-plus-circle"></i></div>
+            <div class="books-stat-info">
+                <h3>New Books</h3>
+                <p>120</p>
+                <span>Was added</span>
+            </div>
+        </div>
+    
+        <div class="books-stat-card categories">
+            <div class="books-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="books-stat-info">
+                <h3>Total Categories</h3>
+                <p>24</p>
+                <span>Deffernt categories</span>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="header-container">
+        <!-- Search -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search by Title, Author, or ISBN...">
+        </div>
+
+        <!-- Top Buttons -->
+        <div class="top-actions">
+            <button type="button" class="add"><i class="fas fa-plus"></i> Add Book</button>
+            <button type="button" class="import"><i class="fa-solid fa-upload"></i> Import CSV</button>
+            <button type="button" class="export"><i class="fa-solid fa-download"></i> Export CSV</button>
+        </div>
+    </div>
+
+    <!--  -->
+    <h2>List of Books in library</h2>
+
+    <!-- Book Grid -->
+    <div class="book-grid">
+
+        <!-- Example Book Cards (9 books) -->
+        <div class="book-card">
+            <div class="book-title">JavaScript Mastery</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> John Doe</span>
+                <span><strong>Status:</strong> Available</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-1234567890</span>
+                <span><strong>Copies:</strong> 5</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> Programming</span>
+                <span><strong>Grade:</strong> 12</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-title">Digital Marketing Essentials</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> Alice Smith</span>
+                <span><strong>Status:</strong> Issued</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-0987654321</span>
+                <span><strong>Copies:</strong> 3</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> Marketing</span>
+                <span><strong>Grade:</strong> 11</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-title">Database Management Systems</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> Michael Brown</span>
+                <span><strong>Status:</strong> Available</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-1122334455</span>
+                <span><strong>Copies:</strong> 7</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> Database</span>
+                <span><strong>Grade:</strong> 12</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-title">Advanced Networking</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> Sarah Wilson</span>
+                <span><strong>Status:</strong> Overdue</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-5544332211</span>
+                <span><strong>Copies:</strong> 2</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> Networking</span>
+                <span><strong>Grade:</strong> 12</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-title">Python Fundamentals</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> Emma Johnson</span>
+                <span><strong>Status:</strong> Available</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-9988776655</span>
+                <span><strong>Copies:</strong> 6</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> Programming</span>
+                <span><strong>Grade:</strong> 11</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-title">HTML & CSS Basics</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> Liam Smith</span>
+                <span><strong>Status:</strong> Issued</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-6677889900</span>
+                <span><strong>Copies:</strong> 4</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> Web Development</span>
+                <span><strong>Grade:</strong> 10</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-title">React.js Guide</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> Noah Lee</span>
+                <span><strong>Status:</strong> Available</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-4455667788</span>
+                <span><strong>Copies:</strong> 5</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> Web Development</span>
+                <span><strong>Grade:</strong> 12</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-title">Machine Learning 101</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> Olivia Davis</span>
+                <span><strong>Status:</strong> Available</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-2233445566</span>
+                <span><strong>Copies:</strong> 3</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> AI</span>
+                <span><strong>Grade:</strong> 12</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-title">Cybersecurity Basics</div>
+            <div class="book-info">
+                <span><strong>Author:</strong> Ethan Martin</span>
+                <span><strong>Status:</strong> Overdue</span>
+            </div>
+            <div class="book-info">
+                <span><strong>ISBN:</strong> 978-3344556677</span>
+                <span><strong>Copies:</strong> 2</span>
+            </div>
+            <div class="book-info">
+                <span><strong>Category:</strong> Security</span>
+                <span><strong>Grade:</strong> 12</span>
+            </div>
+            <div class="book-actions">
+                <i class="fas fa-plus add" title="Add Copy"></i>
+                <i class="fas fa-minus remove" title="Remove Copy"></i>
+                <i class="fas fa-pen edit" title="Edit Book"></i>
+                <i class="fas fa-trash delete" title="Delete Book"></i>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

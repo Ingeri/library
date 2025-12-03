@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Reports & Analytics</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/report.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <!-- Custom JS -->
+    <script src="js/report.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Library Reports & Analytics</h1>
+        <p class="subtitle">Visual insights into borrowing trends, fines, genres, and book conditions.</p>
+    </header>
+
+    <!-- CHARTS -->
+    <section class="charts-grid">
+        <div class="chart-card">
+            <div class="chart-title"><i class="fas fa-chart-line"></i> Monthly Borrowing Trends</div>
+            <canvas id="trendChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-title"><i class="fas fa-book"></i> Borrowed vs Returned Books</div>
+            <canvas id="borrowReturnChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-title"><i class="fas fa-trophy"></i> Top Borrowed Books</div>
+            <canvas id="topBooksChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-title"><i class="fas fa-wallet"></i> Fine Collection Status</div>
+            <canvas id="fineStatusChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-title"><i class="fas fa-tags"></i> Genre Popularity</div>
+            <canvas id="genreChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-title"><i class="fas fa-calendar-week"></i> Fine Payment Breakdown</div>
+            <canvas id="fineBreakdownChart"></canvas>
+        </div>
+    </section>
+
+    <!-- STATISTICS -->
+    <section class="stats-section">
+        <h2>Inventory Summary</h2>
+        <p>Overall library inventory status</p>
+        <!-- Statstics container -->
+        <section class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-book-reader"></i></div>
+                <div class="stat-info">
+                    <h3>1,240</h3>
+                    <p>Total Books Borrowed</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-undo"></i></div>
+                <div class="stat-info">
+                    <h3>1,080</h3>
+                    <p>Total Books Returned</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-coins"></i></div>
+                <div class="stat-info">
+                    <h3>$1,120</h3>
+                    <p>Total Fines Collected</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-times-circle"></i></div>
+                <div class="stat-info">
+                    <h3>42</h3>
+                    <p>Damaged / Lost Books</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

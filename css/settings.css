@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.card form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.card form input[type="text"],
+.card form input[type="email"],
+.card form input[type="password"],
+.card form input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.card form input[type="text"]:focus,
+.card form input[type="email"]:focus,
+.card form input[type="password"]:focus,
+.card form input[type="number"]:focus {
+    border-color: #4e73df;
+    outline: none;
+}   
+
+.card form button,
+.backup-btn,
+.upload-label {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #4e73df;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.card form button:hover,
+.backup-btn:hover,
+.upload-label:hover {
+    background: #2e59d9;
+}
+
+.info-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.upload-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.note {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-top: 8px;
+}

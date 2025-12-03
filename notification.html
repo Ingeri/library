@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Notifications</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/notification.css">
+    
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2><i class="fa-solid fa-bell"></i> Notifications Center</h2>
+
+        <!-- Stats -->
+        <div class="stats-box">
+            <div class="stat-card">
+                <div class="stat-number" id="totalCount">0</div>
+                <div>Total Notifications</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="unreadCount">0</div>
+                <div>Unread</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="readCount">0</div>
+                <div>Read</div>
+            </div>
+        </div>
+
+        <!-- Top Actions -->
+        <div class="actions">
+            <button type="button" class="btn" id="markAllBtn">
+                <i class="fa-solid fa-check-double"></i> Mark All as Read
+            </button>
+
+            <select id="filter" title="select notification to be displayed">
+                <option value="all">Show: All</option>
+                <option value="unread">Unread</option>
+                <option value="important">Important</option>
+                <option value="system">System</option>
+            </select>
+        </div>
+
+        <!-- Notification List -->
+        <div id="notificationList"></div>
+
+        <!-- Load More -->
+        <center>
+            <button type="button" class="btn" id="loadMoreBtn">
+                <i class="fa-solid fa-spinner"></i> Load More
+            </button>
+        </center>
+
+    </div>
+
+    <script src="js/notification.js"></script>
+</body>
+
+</html> 

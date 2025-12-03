@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overdue & Fines</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/overdue.css">
+</head>
+
+<body>
+
+    <div class="dashboard-header overdue-header">
+        <h1>Overdue & Fines</h1>
+        <p>Monitor all overdue books, pending fines, and member notifications in one place.</p>
+    </div>
+
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-hourglass-half"></i>
+                <div class="stat-info">
+                    <p class="stat-title">Total Overdue</p>
+                    <h3>12</h3>
+                    <p class="stat-desc">Books overdue</p>
+                </div>
+            </div>
+    
+            <div class="stat-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <div class="stat-info">
+                    <p class="stat-title">Total Fines Pending</p>
+                    <h3>$450</h3>
+                    <p class="stat-desc">Awaiting collection</p>
+                </div>
+            </div>
+    
+            <div class="stat-card">
+                <i class="fas fa-bell"></i>
+                <div class="stat-info">
+                    <p class="stat-title">Members Notified</p>
+                    <h3>34</h3>
+                    <p class="stat-desc">Notifications sent</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search bar -->
+    <div class="header-container">
+        <!-- Search -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search by name, email, or grade">
+        </div>
+
+        <!-- Top Buttons -->
+        <div class="top-actions">
+            <button type="button" class="add"><i class="fas fa-plus"></i> Add Book</button>
+            <button type="button" class="import"><i class="fa-solid fa-upload"></i> Import CSV</button>
+            <button type="button" class="export"><i class="fa-solid fa-download"></i> Export CSV</button>
+        </div>
+    </div>
+
+    <!--  -->
+    <h2>Members overdued</h2>
+
+    <div class="overdue-grid">
+        <!-- CARD 1 -->
+        <div class="overdue-card">
+            <h3>John Doe</h3>
+            <p><strong>Book:</strong> Data Science Essentials</p>
+            <p><strong>Due Date:</strong> 2025-11-20</p>
+            <p><strong>Days Late:</strong> 12</p>
+            <p class="fine">Fine: $6.00</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="overdue-card">
+            <h3>Alice Smith</h3>
+            <p><strong>Book:</strong> Web Development Mastery</p>
+            <p><strong>Due Date:</strong> 2025-11-18</p>
+            <p><strong>Days Late:</strong> 14</p>
+            <p class="fine">Fine: $7.00</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="overdue-card">
+            <h3>Michael Brown</h3>
+            <p><strong>Book:</strong> Machine Learning Basics</p>
+            <p><strong>Due Date:</strong> 2025-11-25</p>
+            <p><strong>Days Late:</strong> 7</p>
+            <p class="fine">Fine: $3.50</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="overdue-card">
+            <h3>Sarah Wilson</h3>
+            <p><strong>Book:</strong> Introduction to Networking</p>
+            <p><strong>Due Date:</strong> 2025-11-15</p>
+            <p><strong>Days Late:</strong> 17</p>
+            <p class="fine">Fine: $8.50</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="overdue-card">
+            <h3>Emma Davis</h3>
+            <p><strong>Book:</strong> Cybersecurity Fundamentals</p>
+            <p><strong>Due Date:</strong> 2025-11-22</p>
+            <p><strong>Days Late:</strong> 10</p>
+            <p class="fine">Fine: $5.00</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="overdue-card">
+            <h3>Luke Johnson</h3>
+            <p><strong>Book:</strong> Python Programming</p>
+            <p><strong>Due Date:</strong> 2025-11-19</p>
+            <p><strong>Days Late:</strong> 13</p>
+            <p class="fine">Fine: $6.50</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="overdue-card">
+            <h3>Olivia Clark</h3>
+            <p><strong>Book:</strong> Blockchain Fundamentals</p>
+            <p><strong>Due Date:</strong> 2025-11-23</p>
+            <p><strong>Days Late:</strong> 9</p>
+            <p class="fine">Fine: $4.50</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="overdue-card">
+            <h3>William Harris</h3>
+            <p><strong>Book:</strong> Digital Illustration</p>
+            <p><strong>Due Date:</strong> 2025-11-21</p>
+            <p><strong>Days Late:</strong> 11</p>
+            <p class="fine">Fine: $5.50</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+        <!-- CARD 9 -->
+        <div class="overdue-card">
+            <h3>Sophia Martinez</h3>
+            <p><strong>Book:</strong> Graphic Design Principles</p>
+            <p><strong>Due Date:</strong> 2025-11-17</p>
+            <p><strong>Days Late:</strong> 15</p>
+            <p class="fine">Fine: $7.50</p>
+            <p class="status">Status: Overdue</p>
+
+            <div class="actions">
+                <i class="fas fa-eye view" title="View"></i>
+                <i class="fas fa-message message" title="Message"></i>
+                <i class="fas fa-check-circle mark" title="Mark as Paid"></i>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

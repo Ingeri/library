@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* MENU BUTTON (mobile/tablet) */
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2000;
+  display: none; /* Hidden on desktop */
+  border-radius: 5px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: #1e1e2f;
+  color: white;
+  padding: 0 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hidden in mobile until opened */
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* LOGO SECTION */
+.logo-section {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #1e1e2f;
+  padding: 0;
+  z-index: 1000;
+  border-bottom: #324b72 solid 3px;
+}
+
+.logo-section img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.logo-section h2 {
+  font-size: 36pt;
+  font-weight: bolder;
+}
+
+nav ul {
+  list-style: none;
+}
+
+/* LINKS */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 10px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+}
+
+.sidebar a:hover {
+  background: #333;
+}
+
+/* LOGOUT BUTTON */
+.logout {
+  margin-top: 20px;
+  background: #d9534f;
+  text-align: center;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.logout:hover {
+  background: #c9302c;
+}
+
+/* ICONS */
+.sidebar i {
+  width: 20px;
+  text-align: center;
+}
+
+/* IFRAME */
+iframe {
+  flex: 1;
+  margin-left: 230px;
+  height: 100vh;
+  width: calc(100% - 230px);
+  border: none;
+}
+
+/* RESPONSIVE FOR TABLET & MOBILE */
+@media (max-width: 900px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-250px); /* hide sidebar by default */
+  }
+
+  iframe {
+    margin-left: 0;
+    width: 100%;
+  }
+}

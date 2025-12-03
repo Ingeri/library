@@ -1,0 +1,217 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.dashboard-container {
+    padding: 20px;
+}
+
+/* ========== DASHBOARD HEADER ========== */
+.dashboard-header {
+    margin: 20px 0 30px 0;
+    padding: 0 10px;
+}
+
+.dashboard-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0px;
+    line-height: 1.2;
+}
+
+.dashboard-header p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    opacity: 0.85;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .dashboard-header h1 {
+        font-size: 26px;
+    }
+
+    .dashboard-header p {
+        font-size: 14px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+
+    .dashboard-header p {
+        font-size: 13px;
+    }
+}
+
+/* ========== STAT CARDS ========== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-card i {
+    font-size: 32px;
+    color: #4e73df;
+}
+
+.stat-card h3 {
+    margin-bottom: 2px;
+    font-size: 22px;
+}
+
+.stat-card p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.meta {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* ========== RECENT ACTIVITY ========== */
+.recent-activity h2 {
+    margin-bottom: 15px;
+}
+
+.activity-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.activity-card .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.activity-card i {
+    font-size: 26px;
+    color: #36b9cc;
+}
+
+.activity-card h4 {
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.activity-card p {
+    font-size: 13px;
+    color: #666;
+}
+
+.time {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* ========== RESPONSIVE RULES ========== */
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .time {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        margin-top: 5px;
+    }
+}
+
+/* ========== CHARTS ========== */
+.charts-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chart-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: calc(100vw - 40px); /* ensures it never exceeds viewport */
+    box-sizing: border-box;
+}
+
+/* Heading inside chart cards */
+.chart-card h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* ========== RESPONSIVE RULES ========== */
+@media (max-width: 1024px) {
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .charts-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .chart-card {
+        max-width: calc(100vw - 40px); /* small screens: full width minus padding */
+        margin: 0 auto; /* center it horizontally */
+    }
+}

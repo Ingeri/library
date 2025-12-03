@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f4f6fc;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+h2 {
+  color: #4e73df;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Notification Card */
+.notification-card {
+  background: #fff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: start;
+  border-left: 5px solid #4e73df;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: 0.2s ease;
+}
+
+.notification-card.unread {
+  background: #eef2ff;
+  border-left-color: #1cc88a;
+}
+
+.notification-card.important {
+  border-left-color: #e74a3b;
+}
+
+.notification-card.system {
+  border-left-color: #f6c23e;
+}
+
+.notification-card:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 26px;
+  color: #4e73df;
+}
+
+.notification-card.unread .icon {
+  color: #1cc88a;
+}
+
+.notification-card.important .icon {
+  color: #e74a3b;
+}
+
+.notification-card.system .icon {
+  color: #f6c23e;
+}
+
+.details {
+  flex: 1;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.message {
+  font-size: 14px;
+  color: #444;
+  margin: 5px 0;
+}
+
+.time {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Badge */
+.badge {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.badge.unread {
+  background: #d1f7e4;
+  color: #1cc88a;
+}
+
+.badge.important {
+  background: #fce4e6;
+  color: #e74a3b;
+}
+
+.badge.system {
+  background: #fff4d6;
+  color: #f6c23e;
+}
+
+/* Top Actions */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 14px;
+  background: #4e73df;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #3b5ec7;
+}
+
+select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Stats */
+.stats-box {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4e73df;
+}

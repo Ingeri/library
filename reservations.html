@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Reservations</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reservations.css">
+</head>
+
+<body>
+
+    <div class="dashboard-header">
+        <h1>Book Reservations</h1>
+        <p>Manage all active reservations. Search, notify, or update reservations quickly.</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card total-reservations">
+            <div class="stat-icon"><i class="fas fa-book"></i></div>
+            <div class="stat-details">
+                <h3>Total Reservations</h3>
+                <p class="stat-number">3</p>
+                <p class="stat-desc">Active reservations</p>
+            </div>
+        </div>
+
+        <div class="stat-card ready-pickup">
+            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="stat-details">
+                <h3>Ready for Pickup</h3>
+                <p class="stat-number">1</p>
+                <p class="stat-desc">Books ready</p>
+            </div>
+        </div>
+
+        <div class="stat-card pending-reservations">
+            <div class="stat-icon"><i class="fas fa-hourglass-half"></i></div>
+            <div class="stat-details">
+                <h3>Pending</h3>
+                <p class="stat-number">2</p>
+                <p class="stat-desc">Awaiting availability</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search & Actions -->
+    <div class="header-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search by member, book title, or ISBN">
+        </div>
+
+        <div class="top-actions">
+            <button class="add"><i class="fas fa-plus"></i> Add Reservation</button>
+            <button class="import"><i class="fa-solid fa-upload"></i> Import CSV</button>
+            <button class="export"><i class="fa-solid fa-download"></i> Export CSV</button>
+        </div>
+    </div>
+
+    <!--  -->
+    <h2>Reservation List</h2>
+
+    <!-- Reservations Grid -->
+    <div class="reservation-grid">
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>John Doe</h3>
+                <p><strong>Book:</strong> JavaScript Mastery</p>
+                <p><strong>ISBN:</strong> 978-1234567890</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-12-01</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view" title="View Reservation"></i>
+                <i class="fas fa-envelope notify" title="Notify Member"></i>
+                <i class="fas fa-check available" title="Mark as Available"></i>
+                <i class="fas fa-trash delete" title="Delete Reservation"></i>
+            </div>
+        </div>
+
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>Alice Smith</h3>
+                <p><strong>Book:</strong> Digital Marketing Essentials</p>
+                <p><strong>ISBN:</strong> 978-0987654321</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-12-02</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-envelope notify"></i>
+                <i class="fas fa-check available"></i>
+                <i class="fas fa-trash delete"></i>
+            </div>
+        </div>
+
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>Michael Brown</h3>
+                <p><strong>Book:</strong> Database Management Systems</p>
+                <p><strong>ISBN:</strong> 978-1122334455</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-12-01</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-envelope notify"></i>
+                <i class="fas fa-check available"></i>
+                <i class="fas fa-trash delete"></i>
+            </div>
+        </div>
+
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>Sarah Wilson</h3>
+                <p><strong>Book:</strong> Advanced Networking</p>
+                <p><strong>ISBN:</strong> 978-5544332211</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-11-30</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-envelope notify"></i>
+                <i class="fas fa-check available"></i>
+                <i class="fas fa-trash delete"></i>
+            </div>
+        </div>
+
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>David Lee</h3>
+                <p><strong>Book:</strong> Python for Beginners</p>
+                <p><strong>ISBN:</strong> 978-6677889900</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-12-01</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-envelope notify"></i>
+                <i class="fas fa-check available"></i>
+                <i class="fas fa-trash delete"></i>
+            </div>
+        </div>
+
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>Emma Johnson</h3>
+                <p><strong>Book:</strong> HTML & CSS Guide</p>
+                <p><strong>ISBN:</strong> 978-9988776655</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-12-02</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-envelope notify"></i>
+                <i class="fas fa-check available"></i>
+                <i class="fas fa-trash delete"></i>
+            </div>
+        </div>
+
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>William Clark</h3>
+                <p><strong>Book:</strong> Machine Learning Basics</p>
+                <p><strong>ISBN:</strong> 978-4455667788</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-12-01</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-envelope notify"></i>
+                <i class="fas fa-check available"></i>
+                <i class="fas fa-trash delete"></i>
+            </div>
+        </div>
+
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>Olivia Martinez</h3>
+                <p><strong>Book:</strong> React JS Essentials</p>
+                <p><strong>ISBN:</strong> 978-2233445566</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-12-02</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-envelope notify"></i>
+                <i class="fas fa-check available"></i>
+                <i class="fas fa-trash delete"></i>
+            </div>
+        </div>
+
+        <div class="reservation-card">
+            <div class="reservation-info">
+                <h3>James Wilson</h3>
+                <p><strong>Book:</strong> Data Structures & Algorithms</p>
+                <p><strong>ISBN:</strong> 978-3344556677</p>
+                <p><strong>Status:</strong> Reserved</p>
+                <p><strong>Request Date:</strong> 2025-12-01</p>
+            </div>
+            <div class="reservation-actions">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-envelope notify"></i>
+                <i class="fas fa-check available"></i>
+                <i class="fas fa-trash delete"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

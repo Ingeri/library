@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <p>Welcome back, Librarian. Here's your library overview.</p>
+        </div>
+
+        <!-- ======= STAT CARDS ======= -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-book"></i>
+                <div>
+                    <h3>1,245</h3>
+                    <p>Total Books</p>
+                    <span class="meta">32 new books this month</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>564</h3>
+                    <p>Members</p>
+                    <span class="meta">15 new members last month</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-book-reader"></i>
+                <div>
+                    <h3>78</h3>
+                    <p>Issued Today</p>
+                    <span class="meta">Updated 5 minutes ago</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-calendar-check"></i>
+                <div>
+                    <h3>22</h3>
+                    <p>Returned Today</p>
+                    <span class="meta">Up by 10% this week</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ======= CHARTS ROW ======= -->
+        <div class="charts-row">
+
+            <!-- Issue vs Return -->
+            <div class="chart-card">
+                <h2>Weekly Issue & Return Activity</h2>
+                <canvas id="issueChart"></canvas>
+            </div>
+
+            <!-- Member Growth -->
+            <div class="chart-card">
+                <h2>Member Growth & Active Borrowers</h2>
+                <canvas id="memberChart"></canvas>
+            </div>
+        </div>
+
+
+        <!-- ======= RECENT ACTIVITY ======= -->
+        <div class="recent-activity">
+            <h2>Recent Book Activity</h2>
+
+            <div class="activity-card">
+                <div class="left">
+                    <i class="fas fa-book-open"></i>
+                    <div>
+                        <h4>“Python Essentials” issued to John Doe</h4>
+                        <p>Handled by Librarian: Sarah</p>
+                    </div>
+                </div>
+                <span class="time">02 Dec 2025 • 10:24 AM</span>
+            </div>
+
+            <div class="activity-card">
+                <div class="left">
+                    <i class="fas fa-arrow-left"></i>
+                    <div>
+                        <h4>“Modern Web Design” returned</h4>
+                        <p>Returned by: Alice Johnson</p>
+                    </div>
+                </div>
+                <span class="time">02 Dec 2025 • 09:10 AM</span>
+            </div>
+
+            <div class="activity-card">
+                <div class="left">
+                    <i class="fas fa-book"></i>
+                    <div>
+                        <h4>New Book Added: “JavaScript Mastery”</h4>
+                        <p>Added to Programming Section</p>
+                    </div>
+                </div>
+                <span class="time">01 Dec 2025 • 04:55 PM</span>
+            </div>
+               
+            <div class="activity-card">
+                <div class="left">
+                    <i class="fas fa-undo"></i>
+                    <div>
+                        <h4>Digital Marketing Essentials</h4>
+                        <p>Returned by Alice Smith — Marketing Section</p>
+                    </div>
+                </div>
+                <span class="time">02 Dec 2025 • 11:15 AM</span>
+            </div>
+            
+            <div class="activity-card">
+                <div class="left">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div>
+                        <h4>Advanced Networking</h4>
+                        <p>Overdue — Sarah Wilson — Networking Section</p>
+                    </div>
+                </div>
+                <span class="time">30 Nov 2025 • 10:20 AM</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

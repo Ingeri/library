@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - LMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/members.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Library Members</h1>
+        <p class="subtitle">Manage all members. Search, edit, or remove members quickly using the action icons.</p>
+
+        <!-- ===== MEMBERS STATISTICS ===== -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Total Members</h3>
+                    <p class="number">320</p>
+                    <span>Registered users</span>
+                </div>
+            </div>
+        
+            <div class="stat-card">
+                <div class="stat-icon new">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>New Members</h3>
+                    <p class="number">12</p>
+                    <span>Joined this month</span>
+                </div>
+            </div>
+        
+            <div class="stat-card">
+                <div class="stat-icon active">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Active Members</h3>
+                    <p class="number">280</p>
+                    <span>Currently borrowing</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-container">
+            <!-- Search -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search by Title, Author, or ISBN...">
+            </div>
+        
+            <!-- Top Buttons -->
+            <div class="top-actions">
+                <button type="button" class="add"><i class="fas fa-plus"></i> Add Member</button>
+                <button type="button" class="import"><i class="fa-solid fa-upload"></i> Import CSV</button>
+                <button type="button" class="export"><i class="fa-solid fa-download"></i> Export CSV</button>
+            </div>
+        </div>
+
+        <!--  -->
+        <h2>List of library members</h2>
+
+        <!-- Member GRID -->
+        <div class="member-grid">
+
+            <!-- Card 1 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">Tresor Ingeri</div>
+                    <div class="member-email">tresor@example.com</div>
+                    <span class="status active">Active</span>
+                </div>
+
+                <div class="stats">
+                    <div>Borrowed: <strong>12</strong></div>
+                    <div>Returned: <strong>10</strong></div>
+                </div>
+
+                <div class="actions">
+                    <i class="fas fa-eye view" title="View Member"></i>
+                    <i class="fas fa-pen edit" title="Edit Member"></i>
+                    <i class="fas fa-ban block" title="Block Member"></i>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">Alice Uwase</div>
+                    <div class="member-email">alice.uwase@example.com</div>
+                    <span class="status active">Active</span>
+                </div>
+            
+                <div class="stats">
+                    <div>Borrowed: <strong>8</strong></div>
+                    <div>Returned: <strong>6</strong></div>
+                </div>
+            
+                <div class="actions">
+                    <i class="fas fa-eye view"></i>
+                    <i class="fas fa-pen edit"></i>
+                    <i class="fas fa-ban block"></i>
+                </div>
+            </div>
+            
+            <!-- Member 3 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">John Mugabo</div>
+                    <div class="member-email">john.mugabo@example.com</div>
+                    <span class="status blocked">Blocked</span>
+                </div>
+            
+                <div class="stats">
+                    <div>Borrowed: <strong>15</strong></div>
+                    <div>Returned: <strong>15</strong></div>
+                </div>
+            
+                <div class="actions">
+                    <i class="fas fa-eye view"></i>
+                    <i class="fas fa-pen edit"></i>
+                    <i class="fas fa-ban block"></i>
+                </div>
+            </div>
+            
+            <!-- Member 4 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">Sarah Uwera</div>
+                    <div class="member-email">sarah.uwera@example.com</div>
+                    <span class="status pending">Pending</span>
+                </div>
+            
+                <div class="stats">
+                    <div>Borrowed: <strong>3</strong></div>
+                    <div>Returned: <strong>2</strong></div>
+                </div>
+            
+                <div class="actions">
+                    <i class="fas fa-eye view"></i>
+                    <i class="fas fa-pen edit"></i>
+                    <i class="fas fa-ban block"></i>
+                </div>
+            </div>
+            
+            <!-- Member 5 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">Kevin Ishimwe</div>
+                    <div class="member-email">kevin.ishimwe@example.com</div>
+                    <span class="status active">Active</span>
+                </div>
+            
+                <div class="stats">
+                    <div>Borrowed: <strong>11</strong></div>
+                    <div>Returned: <strong>9</strong></div>
+                </div>
+            
+                <div class="actions">
+                    <i class="fas fa-eye view"></i>
+                    <i class="fas fa-pen edit"></i>
+                    <i class="fas fa-ban block"></i>
+                </div>
+            </div>
+            
+            <!-- Member 6 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">Linda Akimana</div>
+                    <div class="member-email">linda.akimana@example.com</div>
+                    <span class="status active">Active</span>
+                </div>
+            
+                <div class="stats">
+                    <div>Borrowed: <strong>6</strong></div>
+                    <div>Returned: <strong>5</strong></div>
+                </div>
+            
+                <div class="actions">
+                    <i class="fas fa-eye view"></i>
+                    <i class="fas fa-pen edit"></i>
+                    <i class="fas fa-ban block"></i>
+                </div>
+            </div>
+            
+            <!-- Member 7 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">Michael Ndayisaba</div>
+                    <div class="member-email">michael.ndayisaba@example.com</div>
+                    <span class="status pending">Pending</span>
+                </div>
+            
+                <div class="stats">
+                    <div>Borrowed: <strong>4</strong></div>
+                    <div>Returned: <strong>4</strong></div>
+                </div>
+            
+                <div class="actions">
+                    <i class="fas fa-eye view"></i>
+                    <i class="fas fa-pen edit"></i>
+                    <i class="fas fa-ban block"></i>
+                </div>
+            </div>
+            
+            <!-- Member 8 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">Grace Mutesi</div>
+                    <div class="member-email">grace.mutesi@example.com</div>
+                    <span class="status active">Active</span>
+                </div>
+            
+                <div class="stats">
+                    <div>Borrowed: <strong>9</strong></div>
+                    <div>Returned: <strong>7</strong></div>
+                </div>
+            
+                <div class="actions">
+                    <i class="fas fa-eye view"></i>
+                    <i class="fas fa-pen edit"></i>
+                    <i class="fas fa-ban block"></i>
+                </div>
+            </div>
+            
+            <!-- Member 9 -->
+            <div class="member-card">
+                <div class="member-info">
+                    <div class="member-name">Samuel Turyasingura</div>
+                    <div class="member-email">samuel.turyasingura@example.com</div>
+                    <span class="status blocked">Blocked</span>
+                </div>
+            
+                <div class="stats">
+                    <div>Borrowed: <strong>14</strong></div>
+                    <div>Returned: <strong>13</strong></div>
+                </div>
+            
+                <div class="actions">
+                    <i class="fas fa-eye view"></i>
+                    <i class="fas fa-pen edit"></i>
+                    <i class="fas fa-ban block"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

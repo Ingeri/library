@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Mobile Menu Button -->
+    <button type="button" class="menu-btn" onclick="toggleSidebar()" title="Toggle Sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="/img/logo.png" alt="LMS Logo">
+            <h2>LMS</h2>
+        </div>
+
+        <!-- Menu -->
+        <nav>
+            <ul>
+                <li><a href="dashboard.html" target="myframe"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="books.html" target="myframe"><i class="fas fa-book"></i> Books</a></li>
+                <li><a href="members.html" target="myframe"><i class="fas fa-users"></i> Members</a></li>
+                <li><a href="issue.html" target="myframe"><i class="fas fa-exchange-alt"></i> Issue & Return</a></li>
+                <li><a href="overdue.html" target="myframe"><i class="fas fa-clock"></i> Overdue & Fines</a></li>
+                <li><a href="reservations.html" target="myframe"><i class="fas fa-calendar-check"></i> Reservations</a></li>
+                <li><a href="reports.html" target="myframe"><i class="fas fa-chart-line"></i> Reports</a></li>
+                <li><a href="notification.html" target="myframe"><i class="fas fa-bell"></i> Notification</a></li>
+                <li><a href="settings.html" target="myframe"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+
+        <!-- Logout -->
+        <a href="logout.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <!-- Main Iframe -->
+    <iframe name="myframe" src="dashboard.html" title="LMS Dashboard Content"></iframe>
+
+</body>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+</script>
+
+</html>

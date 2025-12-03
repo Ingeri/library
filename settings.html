@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/settings.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Settings</h1>
+        <p class="subtitle">Manage your profile, notifications, preferences, and system configurations.</p>
+
+        <div class="settings-grid">
+
+            <!-- Profile Settings -->
+            <div class="card">
+                <h2><i class="fas fa-user"></i> Profile</h2>
+                <form id="profileForm">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe">
+
+                    <label>Email</label>
+                    <input type="email" placeholder="john@example.com">
+
+                    <label>Phone</label>
+                    <input type="text" placeholder="+250 7XX XXX XXX">
+
+                    <button type="submit">Update Profile</button>
+                </form>
+            </div>
+
+            <!-- Notifications -->
+            <div class="card">
+                <h2><i class="fas fa-bell"></i> Notifications</h2>
+                <form id="notificationsForm">
+                    <label><input type="checkbox" checked> Email Notifications</label>
+                    <label><input type="checkbox"> SMS Notifications</label>
+                    <label><input type="checkbox" checked> Push Notifications</label>
+
+                    <button type="submit">Save Notifications</button>
+                </form>
+            </div>
+
+            <!-- Theme -->
+            <div class="card">
+                <h2><i class="fas fa-adjust"></i> Theme</h2>
+                <form id="themeForm">
+                    <label><input type="radio" name="theme" value="light" checked> Light</label>
+                    <label><input type="radio" name="theme" value="dark"> Dark</label>
+                    <button type="submit">Save Theme</button>
+                </form>
+            </div>
+
+            <!-- Password -->
+            <div class="card">
+                <h2><i class="fas fa-key"></i> Change Password</h2>
+                <form id="passwordForm">
+                    <label>Current Password</label>
+                    <input type="password" placeholder="********">
+
+                    <label>New Password</label>
+                    <input type="password" placeholder="********">
+
+                    <label>Confirm New Password</label>
+                    <input type="password" placeholder="********">
+
+                    <button type="submit">Change Password</button>
+                </form>
+            </div>
+
+            <!-- Book Renting Days -->
+            <div class="card">
+                <h2><i class="fas fa-calendar-days"></i> Renting Days</h2>
+                <form id="rentingForm">
+                    <label>Default Renting Days</label>
+                    <input type="number" min="1" max="60" placeholder="14" title="renting days">
+
+                    <label>Fine Per Day (RWF)</label>
+                    <input type="number" min="0" placeholder="100" title="Fine perday">
+
+                    <label>Max-mum Fine</label>
+                    <input type="number" min="0" placeholder="1000" title="Fine perday">
+
+                    <button type="submit">Save Renting Rules</button>
+                </form>
+            </div>
+
+            <!-- Backup & Recovery -->
+            <div class="card">
+                <h2><i class="fas fa-database"></i> Backup & Recovery</h2>
+
+                <p class="info-text">Create or restore backups to secure your library data.</p>
+
+                <button class="backup-btn"><i class="fas fa-download"></i> Create Backup</button>
+
+                <label class="upload-label">
+                    <i class="fas fa-upload"></i> Restore Backup
+                    <input type="file" id="restoreBackup" hidden>
+                </label>
+
+                <small class="note">Supported: .sql, .zip</small>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/settings.js"></script>
+</body>
+
+</html>
