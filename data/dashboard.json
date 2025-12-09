@@ -1,0 +1,65 @@
+{
+  "stats": {
+    "totalBooks": {
+      "count": 1245,
+      "meta": "32 new books this month"
+    },
+    "members": {
+      "count": 564,
+      "meta": "15 new members last month"
+    },
+    "issuedToday": {
+      "count": 78,
+      "meta": "Updated 5 minutes ago"
+    },
+    "returnedToday": {
+      "count": 22,
+      "meta": "Up by 10% this week"
+    }
+  },
+
+  "issueChart": {
+    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "issued": [20, 30, 25, 40, 35, 28, 32],
+    "returned": [10, 20, 15, 25, 22, 18, 20]
+  },
+
+  "memberChart": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "newMembers": [15, 20, 25, 22, 30, 28],
+    "activeBorrowers": [40, 45, 50, 48, 52, 55]
+  },
+
+  "recentActivity": [
+    {
+      "icon": "fas fa-book-open",
+      "title": "“Python Essentials” issued to John Doe",
+      "subtitle": "Handled by Librarian: Sarah",
+      "time": "02 Dec 2025 • 10:24 AM"
+    },
+    {
+      "icon": "fas fa-arrow-left",
+      "title": "“Modern Web Design” returned",
+      "subtitle": "Returned by: Alice Johnson",
+      "time": "02 Dec 2025 • 09:10 AM"
+    },
+    {
+      "icon": "fas fa-book",
+      "title": "New Book Added: “JavaScript Mastery”",
+      "subtitle": "Added to Programming Section",
+      "time": "01 Dec 2025 • 04:55 PM"
+    },
+    {
+      "icon": "fas fa-undo",
+      "title": "Digital Marketing Essentials",
+      "subtitle": "Returned by Alice Smith — Marketing Section",
+      "time": "02 Dec 2025 • 11:15 AM"
+    },
+    {
+      "icon": "fas fa-exclamation-circle",
+      "title": "Advanced Networking",
+      "subtitle": "Overdue — Sarah Wilson — Networking Section",
+      "time": "30 Nov 2025 • 10:20 AM"
+    }
+  ]
+}

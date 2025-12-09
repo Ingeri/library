@@ -1,0 +1,72 @@
+/* Drawer Base */
+ .drawer {
+  position: fixed;
+  top: calc(50vh - 225px);
+  left: calc(50vw - 210px);
+  width: 420px;
+  height: 450px;
+  min-width: 300px;
+  background: #fff;
+  border: 2px solid #1e3a8a;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Header */
+.drawer-header {
+  background: #1e3a8a;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: 6px 6px 0 0;
+}
+
+.drawer-controls button {
+  background: transparent;
+  color: white;
+  border: none;
+  margin-left: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.minimize{
+  padding: 5px 0;
+}
+
+.minimize span {
+  display: block;
+  width: 16px;
+  height: 3px;
+  background: white;
+  margin-top: -5px;
+}
+
+/* Content */
+.drawer-content {
+  padding: 15px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Resize Handle */
+.drawer-resize {
+  width: 12px;
+  height: 12px;
+  background: #1e3a8a;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+  border-radius: 4px;
+}

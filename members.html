@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="css/members.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="css/pagnation.css">
 </head>
 
 <body>
@@ -23,29 +25,29 @@
                 </div>
                 <div class="stat-details">
                     <h3>Total Members</h3>
-                    <p class="number">320</p>
+                    <p class="number"></p>
                     <span>Registered users</span>
                 </div>
             </div>
-        
-            <div class="stat-card">
+
+            <div class="stat-card new">
                 <div class="stat-icon new">
                     <i class="fas fa-user-plus"></i>
                 </div>
                 <div class="stat-details">
                     <h3>New Members</h3>
-                    <p class="number">12</p>
+                    <p class="number"></p>
                     <span>Joined this month</span>
                 </div>
             </div>
-        
-            <div class="stat-card">
+
+            <div class="stat-card active">
                 <div class="stat-icon active">
                     <i class="fas fa-check-circle"></i>
                 </div>
                 <div class="stat-details">
                     <h3>Active Members</h3>
-                    <p class="number">280</p>
+                    <p class="number"></p>
                     <span>Currently borrowing</span>
                 </div>
             </div>
@@ -56,7 +58,7 @@
             <div class="search-bar">
                 <input type="text" placeholder="Search by Title, Author, or ISBN...">
             </div>
-        
+
             <!-- Top Buttons -->
             <div class="top-actions">
                 <button type="button" class="add"><i class="fas fa-plus"></i> Add Member</button>
@@ -71,8 +73,7 @@
         <!-- Member GRID -->
         <div class="member-grid">
 
-            <!-- Card 1 -->
-            <div class="member-card">
+            <!-- <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">Tresor Ingeri</div>
                     <div class="member-email">tresor@example.com</div>
@@ -91,7 +92,6 @@
                 </div>
             </div>
 
-            <!-- Member 2 -->
             <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">Alice Uwase</div>
@@ -111,7 +111,6 @@
                 </div>
             </div>
             
-            <!-- Member 3 -->
             <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">John Mugabo</div>
@@ -131,7 +130,6 @@
                 </div>
             </div>
             
-            <!-- Member 4 -->
             <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">Sarah Uwera</div>
@@ -151,7 +149,6 @@
                 </div>
             </div>
             
-            <!-- Member 5 -->
             <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">Kevin Ishimwe</div>
@@ -171,7 +168,6 @@
                 </div>
             </div>
             
-            <!-- Member 6 -->
             <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">Linda Akimana</div>
@@ -191,7 +187,6 @@
                 </div>
             </div>
             
-            <!-- Member 7 -->
             <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">Michael Ndayisaba</div>
@@ -211,7 +206,6 @@
                 </div>
             </div>
             
-            <!-- Member 8 -->
             <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">Grace Mutesi</div>
@@ -231,7 +225,6 @@
                 </div>
             </div>
             
-            <!-- Member 9 -->
             <div class="member-card">
                 <div class="member-info">
                     <div class="member-name">Samuel Turyasingura</div>
@@ -249,10 +242,24 @@
                     <i class="fas fa-pen edit"></i>
                     <i class="fas fa-ban block"></i>
                 </div>
-            </div>
+            </div> -->
+
         </div>
 
     </div>
+
+    <section name="pagination-sorting-container">
+        <div class="pagination">
+        </div>
+
+        <div class="sorting-buttons">
+            <button type="button" onclick="sortAZ()">A-Z</button>
+            <button type="button" onclick="sortZA()">Z-A</button>
+            <button type="button" onclick="sortBorrowed()">Borrowed</button>
+        </div>
+    </section>
+
+    <script src="js/members.js"></script>
 </body>
 
 </html>

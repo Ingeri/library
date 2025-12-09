@@ -48,14 +48,44 @@
     </div>
 
     <!-- Main Iframe -->
-    <iframe name="myframe" src="dashboard.html" title="LMS Dashboard Content"></iframe>
+    <iframe name="myframe" src="members.html" title="LMS Dashboard Content"></iframe>
 
 </body>
+
+<!-- <script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+</script> -->
 
 <script>
     function toggleSidebar() {
         document.getElementById("sidebar").classList.toggle("active");
     }
+
+    const links = document.querySelectorAll(".sidebar nav ul li a");
+
+    // Restore active link on page reload
+    const activeLink = localStorage.getItem("activeLink");
+    if (activeLink) {
+        links.forEach(link => {
+            if (link.getAttribute("href") === activeLink) {
+                link.classList.add("active");
+            }
+        });
+    }
+
+    // Add active class when clicking
+    links.forEach(link => {
+        link.addEventListener("click", function () {
+            links.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+
+            // Save active link
+            localStorage.setItem("activeLink", this.getAttribute("href"));
+        });
+    });
 </script>
+
 
 </html>

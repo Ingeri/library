@@ -1,187 +1,274 @@
-// ===== Monthly Borrowing Trends =====
-new Chart(document.getElementById("trendChart"), {
-  type: "line",
-  data: {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-    datasets: [
-      {
-        label: "Borrowed Books",
-        data: [120, 150, 180, 200, 240, 260, 300, 280, 310, 330, 350, 400],
-        borderColor: "#4e73df",
-        backgroundColor: "rgba(78,115,223,0.1)",
-        tension: 0.4,
-        fill: true,
-        pointRadius: 5,
-      },
-      {
-        label: "Returned Books",
-        data: [100, 130, 160, 180, 200, 230, 260, 250, 270, 290, 310, 360],
-        borderColor: "#1cc88a",
-        backgroundColor: "rgba(28,200,138,0.1)",
-        tension: 0.4,
-        fill: true,
-        pointRadius: 5,
-      },
-    ],
-  },
-  options: { responsive: true, plugins: { legend: { position: "top" } } },
-});
+// ============================
+// HELPER: Number Formatter
+// ============================
+function formatNumber(num) {
+  return new Intl.NumberFormat().format(num);
+}
 
-// ===== Borrow vs Return Summary =====
-const chartData = [1240, 1080];
-
-const borrowReturnChart = new Chart(
-  document.getElementById("borrowReturnChart"),
-  {
-    type: "bar",
-    data: {
-      labels: ["Borrowed", "Returned"],
-      datasets: [
-        {
-          label: "Books Count",
-          data: [...chartData],
-          backgroundColor: ["#4e73df", "#1cc88a"],
-          borderRadius: 12,
-          maxBarThickness: 80,
+// ============================
+// LOAD CHART DATA FROM JSON
+// ============================
+fetch("../data/reportchart.json")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("Failed to load reportchart.json");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    // ============================
+    // MONTHLY BORROWING TRENDS
+    // ============================
+    const trendCanvas = document.getElementById("trendChart");
+    if (trendCanvas) {
+      new Chart(trendCanvas, {
+        type: "line",
+        data: {
+          labels: data.monthlyTrends.labels,
+          datasets: [
+            {
+              label: "Borrowed Books",
+              data: data.monthlyTrends.borrowed,
+              borderColor: "#4e73df",
+              backgroundColor: "rgba(78,115,223,0.1)",
+              fill: true,
+              tension: 0.4,
+            },
+            {
+              label: "Returned Books",
+              data: data.monthlyTrends.returned,
+              borderColor: "#1cc88a",
+              backgroundColor: "rgba(28,200,138,0.1)",
+              fill: true,
+              tension: 0.4,
+            },
+          ],
         },
-      ],
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: true,
-          position: "top",
-          labels: {
-            generateLabels: function (chart) {
-              const data = chart.data.datasets[0];
-              return chart.data.labels.map((label, i) => ({
-                text: label,
-                fillStyle: data.backgroundColor[i],
-                strokeStyle: data.backgroundColor[i],
-                hidden: data.data[i] === 0, // detect if bar is hidden
-                index: i,
-                font: {
-                  decoration: data.data[i] === 0 ? "line-through" : "normal",
-                }, // strike-through
-              }));
+        options: {
+          responsive: true,
+          animation: {
+            duration: 1200,
+            easing: "easeOutQuart",
+          },
+        },
+      });
+    }
+
+    // ==========================================
+    // BORROW vs RETURN (INTERACTIVE + JSON DATA)
+    // ==========================================
+    const borrowCanvas = document.getElementById("borrowReturnChart");
+    if (borrowCanvas) {
+      const chartData = [...data.borrowVsReturn];
+
+      const borrowReturnChart = new Chart(borrowCanvas, {
+        type: "bar",
+        data: {
+          labels: ["Borrowed", "Returned"],
+          datasets: [
+            {
+              label: "Books Count",
+              data: [...chartData],
+              backgroundColor: ["#4e73df", "#1cc88a"],
+              borderRadius: 12,
+              maxBarThickness: 80,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          animation: {
+            duration: 1200,
+            easing: "easeOutQuart",
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+              labels: {
+                generateLabels: function (chart) {
+                  const dataSet = chart.data.datasets[0];
+
+                  return chart.data.labels.map((label, i) => ({
+                    text: label,
+                    fillStyle: dataSet.backgroundColor[i],
+                    strokeStyle: dataSet.backgroundColor[i],
+                    hidden: dataSet.data[i] === 0,
+                    index: i,
+                    font: {
+                      decoration:
+                        dataSet.data[i] === 0 ? "line-through" : "normal",
+                    },
+                  }));
+                },
+              },
+              onClick: function (e, legendItem, legend) {
+                const index = legendItem.index;
+                const chartInstance = legend.chart;
+
+                chartInstance.data.datasets[0].data[index] =
+                  chartInstance.data.datasets[0].data[index] === 0
+                    ? chartData[index]
+                    : 0;
+
+                chartInstance.update();
+              },
+            },
+
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return (
+                    context.label + ": " + formatNumber(context.raw) + " books"
+                  );
+                },
+              },
             },
           },
-          onClick: function (e, legendItem, legend) {
-            const index = legendItem.index;
-            const ci = legend.chart;
-            // Toggle value between 0 and original
-            ci.data.datasets[0].data[index] =
-              ci.data.datasets[0].data[index] === 0 ? chartData[index] : 0;
-            ci.update();
-          },
-        },
-        tooltip: {
-          callbacks: {
-            label: function (context) {
-              return context.label + ": " + context.raw + " books";
+
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { stepSize: 200 },
+              grid: { color: "#e0e0e0" },
+            },
+            x: {
+              grid: { display: false },
             },
           },
         },
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          ticks: { stepSize: 200 },
-          grid: { color: "#e0e0e0" },
+      });
+    }
+
+    // ============================
+    // TOP BORROWED BOOKS
+    // ============================
+    const topBooksCanvas = document.getElementById("topBooksChart");
+    if (topBooksCanvas) {
+      new Chart(topBooksCanvas, {
+        type: "pie",
+        data: {
+          labels: data.topBooks.labels,
+          datasets: [
+            {
+              data: data.topBooks.data,
+            },
+          ],
         },
-        x: { grid: { display: false } },
-      },
-    },
-  }
-);
+        options: {
+          responsive: true,
+          animation: {
+            duration: 1200,
+            easing: "easeOutQuart",
+          },
+        },
+      });
+    }
 
+    // ============================
+    // GENRE POPULARITY
+    // ============================
+    const genreCanvas = document.getElementById("genreChart");
+    if (genreCanvas) {
+      new Chart(genreCanvas, {
+        type: "bar",
+        data: {
+          labels: data.genrePopularity.labels,
+          datasets: [
+            {
+              data: data.genrePopularity.data,
+              backgroundColor: "#36b9cc",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          animation: {
+            duration: 1200,
+            easing: "easeOutQuart",
+          },
+        },
+      });
+    }
 
-// ===== Top Borrowed Books =====
-new Chart(document.getElementById("topBooksChart"), {
-  type: "pie",
-  data: {
-    labels: [
-      "Python Basics",
-      "HTML & CSS",
-      "Digital Marketing",
-      "Networking Essentials",
-      "AI for Beginners",
-    ],
-    datasets: [
-      {
-        data: [150, 120, 100, 90, 80],
-        backgroundColor: [
-          "#4e73df",
-          "#36b9cc",
-          "#1cc88a",
-          "#f6c23e",
-          "#e74a3b",
-        ],
-      },
-    ],
-  },
-  options: { responsive: true },
-});
+    // ============================
+    // FINE STATUS
+    // ============================
+    const fineStatusCanvas = document.getElementById("fineStatusChart");
+    if (fineStatusCanvas) {
+      new Chart(fineStatusCanvas, {
+        type: "doughnut",
+        data: {
+          labels: ["Collected", "Pending"],
+          datasets: [
+            {
+              data: data.fineStatus,
+              backgroundColor: ["#1cc88a", "#e74a3b"],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          animation: {
+            duration: 1200,
+            easing: "easeOutQuart",
+          },
+        },
+      });
+    }
 
-// ===== Genre Popularity =====
-new Chart(document.getElementById("genreChart"), {
-  type: "bar",
-  data: {
-    labels: ["Technology", "Fiction", "Business", "Science", "History", "Kids"],
-    datasets: [
-      {
-        label: "Books Borrowed",
-        data: [320, 210, 180, 260, 150, 90],
-        backgroundColor: "#36b9cc",
-        borderRadius: 10,
-      },
-    ],
-  },
-  options: { responsive: true },
-});
+    // ============================
+    // FINE BREAKDOWN
+    // ============================
+    const fineBreakdownCanvas = document.getElementById("fineBreakdownChart");
+    if (fineBreakdownCanvas) {
+      new Chart(fineBreakdownCanvas, {
+        type: "bar",
+        data: {
+          labels: data.fineBreakdown.labels,
+          datasets: [
+            {
+              data: data.fineBreakdown.data,
+              backgroundColor: "#f6c23e",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          animation: {
+            duration: 1200,
+            easing: "easeOutQuart",
+          },
+        },
+      });
+    }
+  })
+  .catch((err) => {
+    console.error("Chart Data Load Error:", err);
+    alert("Failed to load report chart data. Check your JSON file path.");
+  });
+// ============================
+// END OF REPORTS JS
+// ============================
 
-// ===== Fine Status =====
-new Chart(document.getElementById("fineStatusChart"), {
-  type: "doughnut",
-  data: {
-    labels: ["Collected", "Pending"],
-    datasets: [
-      {
-        data: [1120, 380],
-        backgroundColor: ["#1cc88a", "#e74a3b"],
-      },
-    ],
-  },
-  options: { responsive: true },
-});
+// ============================
+// LOAD STATISTICS FROM JSON
+// ============================
+fetch("../data/reportstats.json")
+  .then(res => {
+    if (!res.ok) {
+      throw new Error("Failed to load reportstats.json");
+    }
+    return res.json();
+  })
+  .then(stats => {
 
-// ===== Fine Breakdown =====
-new Chart(document.getElementById("fineBreakdownChart"), {
-  type: "bar",
-  data: {
-    labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
-    datasets: [
-      {
-        label: "Fine Payments",
-        data: [200, 300, 250, 370],
-        backgroundColor: "#f6c23e",
-        borderRadius: 10,
-      },
-    ],
-  },
-  options: { responsive: true },
-});
+    document.getElementById("statBorrowed").innerText = formatNumber(stats.totalBorrowed);
+    document.getElementById("statReturned").innerText = formatNumber(stats.totalReturned);
+    document.getElementById("statFines").innerText = "$" + formatNumber(stats.totalFines);
+    document.getElementById("statDamaged").innerText = formatNumber(stats.damagedBooks);
+
+  })
+  .catch(err => {
+    console.error("Stats Load Error:", err);
+  });

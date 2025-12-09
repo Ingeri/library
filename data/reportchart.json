@@ -1,0 +1,52 @@
+{
+  "monthlyTrends": {
+    "labels": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "borrowed": [120, 150, 180, 200, 240, 260, 300, 280, 310, 330, 350, 400],
+    "returned": [100, 130, 160, 180, 200, 230, 260, 250, 270, 290, 310, 360]
+  },
+
+  "borrowVsReturn": [1240, 1080],
+
+  "topBooks": {
+    "labels": [
+      "Python Basics",
+      "HTML & CSS",
+      "Digital Marketing",
+      "Networking Essentials",
+      "AI for Beginners"
+    ],
+    "data": [150, 120, 100, 90, 80]
+  },
+
+  "genrePopularity": {
+    "labels": [
+      "Technology",
+      "Fiction",
+      "Business",
+      "Science",
+      "History",
+      "Kids"
+    ],
+    "data": [320, 210, 180, 260, 150, 90]
+  },
+
+  "fineStatus": [1120, 380],
+
+  "fineBreakdown": {
+    "labels": ["Week 1", "Week 2", "Week 3", "Week 4"],
+    "data": [200, 300, 250, 370]
+  }
+}

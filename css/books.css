@@ -138,6 +138,11 @@ p.subtitle {
   transition: 0.2s;
 }
 
+.book-actions i.view {
+  background: #36b9cc;
+  color: white;
+}
+
 .book-actions i.add {
   background: #4e73df;
   color: white;
@@ -183,10 +188,10 @@ p.subtitle {
   }
 }
 
-@media (max-width: 425px){
-    .top-actions{
-        flex-direction: column;
-    }
+@media (max-width: 425px) {
+  .top-actions {
+    flex-direction: column;
+  }
 }
 
 /*  */
@@ -203,7 +208,7 @@ p.subtitle {
   background: #ffffff;
   padding: 18px;
   border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   gap: 15px;
   transition: 0.25s ease;
 }
@@ -241,19 +246,141 @@ p.subtitle {
 }
 
 /* Colored Borders */
-.available i{
+.available i {
   color: #1cc88a;
 }
 
-.new i{
+.new i {
   color: #4e73df;
 }
 
-.categories i{
-  color:  #f6c23e;
+.categories i {
+  color: #f6c23e;
 }
 
 .books-stat-info span {
   font-size: 13px;
   color: #666;
+}
+
+/* ============================
+   CONTENT INSIDE DRAWER
+===============================*/
+
+/* Title inside drawer content */
+.drawer-content h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #1e3a8a;
+  border-bottom: 2px solid #1e3a8a;
+  padding-bottom: 5px;
+}
+
+/* Labels */
+.drawer-content label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Inputs */
+.drawer-content input,
+.drawer-content select,
+.drawer-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 2px solid #1e3a8a;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  background: #f8fafc;
+  transition: 0.2s;
+}
+
+.drawer-content input:focus,
+.drawer-content select:focus,
+.drawer-content textarea:focus {
+  border-color: #0f172a;
+  background: #fff;
+}
+
+/* Buttons inside drawer */
+.drawer-content button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin-top: 18px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.drawer-content button:hover {
+  background: #0f172a;
+}
+
+/* Confirmation dialog layout */
+.drawer-content p {
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+/* Two buttons inline (Delete confirmation) */
+.drawer-content #confirm-delete-btn,
+.drawer-content #cancel-delete-btn {
+  width: 48%;
+  display: inline-block;
+}
+
+.drawer-content #cancel-delete-btn {
+  background: #475569;
+}
+
+.drawer-content #cancel-delete-btn:hover {
+  background: #1e293b;
+}
+
+/* Buttons in rows */
+.drawer-content button + button {
+  margin-left: 2%;
+}
+
+/* Scrollbar beautification */
+.drawer-content::-webkit-scrollbar {
+  width: 8px;
+}
+.drawer-content::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+.drawer-content::-webkit-scrollbar-thumb {
+  background: #1e3a8a;
+  border-radius: 4px;
+}
+
+/* Paragraph data in View Book (Title, Author etc.) */
+.drawer-content p strong {
+  color: #1e3a8a;
+}
+
+/* Add spacing between items */
+.drawer-content p {
+  margin: 6px 0;
+}
+
+/* Input number arrows */
+.drawer-content input[type="number"] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  /* -moz-appearance: textfield; */
+}
+.drawer-content input[type="number"]::-webkit-inner-spin-button,
+.drawer-content input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }

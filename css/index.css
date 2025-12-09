@@ -139,3 +139,15 @@ iframe {
     width: 100%;
   }
 }
+
+/* active link */
+.sidebar nav ul li a.active {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+}
+
+/* Icon color inside active link */
+.sidebar nav ul li a.active i {
+  color: #fff;
+}

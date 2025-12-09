@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/books.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="css/pagnation.css">
 </head>
 
 <body>
@@ -25,29 +27,29 @@
             <div class="books-icon"><i class="fas fa-book-open"></i></div>
             <div class="books-stat-info">
                 <h3>Available Books</h3>
-                <p>3,420</p>
+                <p></p>
                 <span>books in Library</span>
             </div>
         </div>
-    
+
         <div class="books-stat-card new">
             <div class="books-icon"><i class="fas fa-plus-circle"></i></div>
             <div class="books-stat-info">
                 <h3>New Books</h3>
-                <p>120</p>
+                <p></p>
                 <span>Was added</span>
             </div>
         </div>
-    
+
         <div class="books-stat-card categories">
             <div class="books-icon"><i class="fas fa-layer-group"></i></div>
             <div class="books-stat-info">
                 <h3>Total Categories</h3>
-                <p>24</p>
+                <p></p>
                 <span>Deffernt categories</span>
             </div>
         </div>
-    
+
     </div>
 
     <div class="header-container">
@@ -71,7 +73,7 @@
     <div class="book-grid">
 
         <!-- Example Book Cards (9 books) -->
-        <div class="book-card">
+        <!-- <div class="book-card">
             <div class="book-title">JavaScript Mastery</div>
             <div class="book-info">
                 <span><strong>Author:</strong> John Doe</span>
@@ -86,6 +88,7 @@
                 <span><strong>Grade:</strong> 12</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
@@ -108,6 +111,7 @@
                 <span><strong>Grade:</strong> 11</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
@@ -130,6 +134,7 @@
                 <span><strong>Grade:</strong> 12</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
@@ -152,6 +157,7 @@
                 <span><strong>Grade:</strong> 12</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
@@ -174,6 +180,7 @@
                 <span><strong>Grade:</strong> 11</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
@@ -196,6 +203,7 @@
                 <span><strong>Grade:</strong> 10</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
@@ -218,6 +226,7 @@
                 <span><strong>Grade:</strong> 12</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
@@ -240,6 +249,7 @@
                 <span><strong>Grade:</strong> 12</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
@@ -262,15 +272,27 @@
                 <span><strong>Grade:</strong> 12</span>
             </div>
             <div class="book-actions">
+                <i class="fas fa-eye view" title="View Book's Details"></i>
                 <i class="fas fa-plus add" title="Add Copy"></i>
                 <i class="fas fa-minus remove" title="Remove Copy"></i>
                 <i class="fas fa-pen edit" title="Edit Book"></i>
                 <i class="fas fa-trash delete" title="Delete Book"></i>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
+    <section class="pagination-sorting-container">
+        <div class="pagination">
+        </div>
+
+        <div class="sorting-buttons">
+            <button type="button" onclick="sortAZ()">A-Z</button>
+            <button type="button" onclick="sortZA()">Z-A</button>
+            <button type="button" onclick="sortAvailable()">Available</button>
+        </div>
+    </section>
+    <script src="js/books.js"></script>
 </body>
 
 </html>
