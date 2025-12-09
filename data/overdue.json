@@ -1,0 +1,110 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "book": "Data Science Essentials",
+    "dueDate": "2025-11-20",
+    "daysLate": 12,
+    "fine": 6.0,
+    "status": "Overdue"
+  },
+  {
+    "name": "Alice Smith",
+    "email": "alice@example.com",
+    "book": "Web Development Mastery",
+    "dueDate": "2025-11-18",
+    "daysLate": 14,
+    "fine": 7.0,
+    "status": "Overdue"
+  },
+  {
+    "name": "Michael Brown",
+    "email": "michael@example.com",
+    "book": "Machine Learning Basics",
+    "dueDate": "2025-11-25",
+    "daysLate": 7,
+    "fine": 3.5,
+    "status": "Overdue"
+  },
+  {
+    "name": "Sarah Wilson",
+    "email": "sarah@example.com",
+    "book": "Introduction to Networking",
+    "dueDate": "2025-11-15",
+    "daysLate": 17,
+    "fine": 8.5,
+    "status": "Overdue"
+  },
+  {
+    "name": "Emma Davis",
+    "email": "emma@example.com",
+    "book": "Cybersecurity Fundamentals",
+    "dueDate": "2025-11-22",
+    "daysLate": 10,
+    "fine": 5.0,
+    "status": "Overdue"
+  },
+  {
+    "name": "Luke Johnson",
+    "email": "luke@example.com",
+    "book": "Python Programming",
+    "dueDate": "2025-11-19",
+    "daysLate": 13,
+    "fine": 6.5,
+    "status": "Overdue"
+  },
+  {
+    "name": "Olivia Clark",
+    "email": "olivia@example.com",
+    "book": "Blockchain Fundamentals",
+    "dueDate": "2025-11-23",
+    "daysLate": 9,
+    "fine": 4.5,
+    "status": "Overdue"
+  },
+  {
+    "name": "William Harris",
+    "email": "william@example.com",
+    "book": "Digital Illustration",
+    "dueDate": "2025-11-21",
+    "daysLate": 11,
+    "fine": 5.5,
+    "status": "Overdue"
+  },
+  {
+    "name": "Sophia Martinez",
+    "email": "sophia@example.com",
+    "book": "Graphic Design Principles",
+    "dueDate": "2025-11-17",
+    "daysLate": 15,
+    "fine": 7.5,
+    "status": "Overdue"
+  },
+  {
+    "name": "James Lee",
+    "email": "james@example.com",
+    "book": "Database Systems",
+    "dueDate": "2025-11-16",
+    "daysLate": 16,
+    "fine": 8.0,
+    "status": "Overdue"
+  },
+  {
+    "name": "Mia Robinson",
+    "email": "mia@example.com",
+    "book": "Cloud Computing Essentials",
+    "dueDate": "2025-11-24",
+    "daysLate": 8,
+    "fine": 4.0,
+    "status": "Overdue"
+  },
+  {
+    "name": "Ethan Walker",
+    "email": "ethan@example.com",
+    "book": "Artificial Intelligence Basics",
+    "dueDate": "2025-11-26",
+    "daysLate": 6,
+    "fine": 3.0,
+    "status": "Overdue"
+  }
+]

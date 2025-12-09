@@ -14,6 +14,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/reservations.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="css/pagnation.css">
 </head>
 
 <body>
@@ -28,7 +30,7 @@
             <div class="stat-icon"><i class="fas fa-book"></i></div>
             <div class="stat-details">
                 <h3>Total Reservations</h3>
-                <p class="stat-number">3</p>
+                <p class="stat-number"></p>
                 <p class="stat-desc">Active reservations</p>
             </div>
         </div>
@@ -37,7 +39,7 @@
             <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
             <div class="stat-details">
                 <h3>Ready for Pickup</h3>
-                <p class="stat-number">1</p>
+                <p class="stat-number"></p>
                 <p class="stat-desc">Books ready</p>
             </div>
         </div>
@@ -46,7 +48,7 @@
             <div class="stat-icon"><i class="fas fa-hourglass-half"></i></div>
             <div class="stat-details">
                 <h3>Pending</h3>
-                <p class="stat-number">2</p>
+                <p class="stat-number"></p>
                 <p class="stat-desc">Awaiting availability</p>
             </div>
         </div>
@@ -59,9 +61,9 @@
         </div>
 
         <div class="top-actions">
-            <button class="add"><i class="fas fa-plus"></i> Add Reservation</button>
-            <button class="import"><i class="fa-solid fa-upload"></i> Import CSV</button>
-            <button class="export"><i class="fa-solid fa-download"></i> Export CSV</button>
+            <button type="button" class="add"><i class="fas fa-plus"></i> Add Reservation</button>
+            <button type="button" class="import"><i class="fa-solid fa-upload"></i> Import CSV</button>
+            <button type="button" class="export"><i class="fa-solid fa-download"></i> Export CSV</button>
         </div>
     </div>
 
@@ -70,7 +72,7 @@
 
     <!-- Reservations Grid -->
     <div class="reservation-grid">
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>John Doe</h3>
                 <p><strong>Book:</strong> JavaScript Mastery</p>
@@ -84,9 +86,9 @@
                 <i class="fas fa-check available" title="Mark as Available"></i>
                 <i class="fas fa-trash delete" title="Delete Reservation"></i>
             </div>
-        </div>
+        </div> -->
 
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>Alice Smith</h3>
                 <p><strong>Book:</strong> Digital Marketing Essentials</p>
@@ -100,9 +102,9 @@
                 <i class="fas fa-check available"></i>
                 <i class="fas fa-trash delete"></i>
             </div>
-        </div>
+        </div> -->
 
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>Michael Brown</h3>
                 <p><strong>Book:</strong> Database Management Systems</p>
@@ -116,9 +118,9 @@
                 <i class="fas fa-check available"></i>
                 <i class="fas fa-trash delete"></i>
             </div>
-        </div>
+        </div> -->
 
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>Sarah Wilson</h3>
                 <p><strong>Book:</strong> Advanced Networking</p>
@@ -132,9 +134,9 @@
                 <i class="fas fa-check available"></i>
                 <i class="fas fa-trash delete"></i>
             </div>
-        </div>
+        </div> -->
 
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>David Lee</h3>
                 <p><strong>Book:</strong> Python for Beginners</p>
@@ -148,9 +150,9 @@
                 <i class="fas fa-check available"></i>
                 <i class="fas fa-trash delete"></i>
             </div>
-        </div>
+        </div> -->
 
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>Emma Johnson</h3>
                 <p><strong>Book:</strong> HTML & CSS Guide</p>
@@ -164,9 +166,9 @@
                 <i class="fas fa-check available"></i>
                 <i class="fas fa-trash delete"></i>
             </div>
-        </div>
+        </div> -->
 
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>William Clark</h3>
                 <p><strong>Book:</strong> Machine Learning Basics</p>
@@ -180,9 +182,9 @@
                 <i class="fas fa-check available"></i>
                 <i class="fas fa-trash delete"></i>
             </div>
-        </div>
+        </div> -->
 
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>Olivia Martinez</h3>
                 <p><strong>Book:</strong> React JS Essentials</p>
@@ -196,9 +198,9 @@
                 <i class="fas fa-check available"></i>
                 <i class="fas fa-trash delete"></i>
             </div>
-        </div>
+        </div> -->
 
-        <div class="reservation-card">
+        <!-- <div class="reservation-card">
             <div class="reservation-info">
                 <h3>James Wilson</h3>
                 <p><strong>Book:</strong> Data Structures & Algorithms</p>
@@ -212,9 +214,21 @@
                 <i class="fas fa-check available"></i>
                 <i class="fas fa-trash delete"></i>
             </div>
-        </div>
+        </div> -->
     </div>
 
+    <section class="pagination-sorting-container">
+        <div class="pagination">
+        </div>
+    
+        <div class="sorting-buttons">
+            <button type="button" onclick="sortAZ()">A-Z</button>
+            <button type="button" onclick="sortZA()">Z-A</button>
+            <button type="button" onclick="sortAvailable()">Available</button>
+        </div>
+    </section>
+
+    <script src="js/reservation.js"></script>
 </body>
 
 </html>

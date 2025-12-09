@@ -1,0 +1,86 @@
+[
+  {
+    "name": "John Doe",
+    "book": "JavaScript Mastery",
+    "isbn": "978-1234567890",
+    "status": "Reserved",
+    "requestDate": "2025-12-01"
+  },
+  {
+    "name": "Alice Smith",
+    "book": "Digital Marketing Essentials",
+    "isbn": "978-0987654321",
+    "status": "Reserved",
+    "requestDate": "2025-12-02"
+  },
+  {
+    "name": "Michael Brown",
+    "book": "Database Management Systems",
+    "isbn": "978-1122334455",
+    "status": "Reserved",
+    "requestDate": "2025-12-01"
+  },
+  {
+    "name": "Sarah Wilson",
+    "book": "Advanced Networking",
+    "isbn": "978-5544332211",
+    "status": "Ready for Pickup",
+    "requestDate": "2025-11-30"
+  },
+  {
+    "name": "David Lee",
+    "book": "Python for Beginners",
+    "isbn": "978-6677889900",
+    "status": "Reserved",
+    "requestDate": "2025-12-01"
+  },
+  {
+    "name": "Emma Johnson",
+    "book": "HTML & CSS Guide",
+    "isbn": "978-9988776655",
+    "status": "Reserved",
+    "requestDate": "2025-12-02"
+  },
+  {
+    "name": "William Clark",
+    "book": "Machine Learning Basics",
+    "isbn": "978-4455667788",
+    "status": "Pending",
+    "requestDate": "2025-12-01"
+  },
+  {
+    "name": "Olivia Martinez",
+    "book": "React JS Essentials",
+    "isbn": "978-2233445566",
+    "status": "Reserved",
+    "requestDate": "2025-12-02"
+  },
+  {
+    "name": "James Wilson",
+    "book": "Data Structures & Algorithms",
+    "isbn": "978-3344556677",
+    "status": "Ready for Pickup",
+    "requestDate": "2025-12-01"
+  },
+  {
+    "name": "Sophia Taylor",
+    "book": "Node.js in Action",
+    "isbn": "978-5566778899",
+    "status": "Reserved",
+    "requestDate": "2025-12-03"
+  },
+  {
+    "name": "Benjamin Harris",
+    "book": "Modern PHP Development",
+    "isbn": "978-6677990011",
+    "status": "Pending",
+    "requestDate": "2025-12-02"
+  },
+  {
+    "name": "Mia Thompson",
+    "book": "Artificial Intelligence 101",
+    "isbn": "978-7788991122",
+    "status": "Reserved",
+    "requestDate": "2025-12-01"
+  }
+]

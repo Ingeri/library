@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/overdue.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="css/pagnation.css">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
                 <i class="fas fa-hourglass-half"></i>
                 <div class="stat-info">
                     <p class="stat-title">Total Overdue</p>
-                    <h3>12</h3>
+                    <h3></h3>
                     <p class="stat-desc">Books overdue</p>
                 </div>
             </div>
@@ -32,7 +34,7 @@
                 <i class="fas fa-money-bill-wave"></i>
                 <div class="stat-info">
                     <p class="stat-title">Total Fines Pending</p>
-                    <h3>$450</h3>
+                    <h3></h3>
                     <p class="stat-desc">Awaiting collection</p>
                 </div>
             </div>
@@ -41,7 +43,7 @@
                 <i class="fas fa-bell"></i>
                 <div class="stat-info">
                     <p class="stat-title">Members Notified</p>
-                    <h3>34</h3>
+                    <h3></h3>
                     <p class="stat-desc">Notifications sent</p>
                 </div>
             </div>
@@ -57,7 +59,7 @@
 
         <!-- Top Buttons -->
         <div class="top-actions">
-            <button type="button" class="add"><i class="fas fa-plus"></i> Add Book</button>
+            <button type="button" class="add"><i class="fas fa-plus"></i> Add Fine</button>
             <button type="button" class="import"><i class="fa-solid fa-upload"></i> Import CSV</button>
             <button type="button" class="export"><i class="fa-solid fa-download"></i> Export CSV</button>
         </div>
@@ -213,6 +215,18 @@
 
     </div>
 
+    <section class="pagination-sorting-container">
+        <div class="pagination">
+        </div>
+    
+        <div class="sorting-buttons">
+            <button type="button" onclick="sortAZ()">A-Z</button>
+            <button type="button" onclick="sortZA()">Z-A</button>
+            <button type="button" onclick="sortAvailable()">Available</button>
+        </div>
+    </section>
+
+    <script src="js/overdue.js"></script>
 </body>
 
 </html>
